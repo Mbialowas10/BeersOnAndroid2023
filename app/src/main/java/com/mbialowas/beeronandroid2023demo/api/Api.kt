@@ -7,6 +7,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 object Api {
     private val BASE_URL = "https://api.sampleapis.com/beers/"
+    //private val BASE_URL = "https://api.sampleapis.com/"
 
     // convert the json into objects that would be understood in project
     private val moshi =  Moshi.Builder()
@@ -19,7 +20,7 @@ object Api {
         .baseUrl(BASE_URL)
         .build()
 
-        val retrofitService: BeersService by lazy{
-            retrofit.create(BeersService::class.java)
-        }
+    val retrofitService: BeersService by lazy{
+        retrofit.create(BeersService::class.java)
+    }
 }

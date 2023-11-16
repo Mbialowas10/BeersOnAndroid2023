@@ -8,7 +8,7 @@ import androidx.compose.runtime.remember
 import com.mbialowas.beeronandroid2023demo.model.BeerItem
 import retrofit2.Call
 import retrofit2.Response
-import javax.security.auth.callback.Callback
+
 
 class BeersManager {
     private var _beersResponse = mutableStateOf<List<BeerItem>>(emptyList()) // top level api
@@ -30,7 +30,7 @@ class BeersManager {
                 response: Response<List<BeerItem>>
             ) {
                 _beersResponse.value = response.body() ?: emptyList()
-                //Log.d("news", "${_beersResponse.value}")
+                Log.d("Beers", "${_beersResponse.value}")
             }
 
             override fun onFailure(call: Call<List<BeerItem>>, t: Throwable) {
