@@ -1,5 +1,6 @@
 package com.mbialowas.beeronandroid2023demo.screens
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -23,10 +24,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mbialowas.beeronandroid2023demo.R
+import com.mbialowas.beeronandroid2023demo.api.BeersManager
 
 
 @Composable
-fun Beers() {
+fun Beers(beersManager: BeersManager) {
+    val beers = beersManager.beersResponse.value
+    Log.i("DataResponse", "$beers")
+
     BeerCard()
 }
 
@@ -69,6 +74,27 @@ fun BeerCard (){
                     color = Color.White
 
                 )
+                Column{
+                    Row{
+                        Text(
+                          text="Average Vote: ",
+                            modifier = Modifier
+                                .padding(end = 8.dp),
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = Color.White
+                        )
+                        Text(
+                            text = "# of Reviews",
+                            modifier = Modifier.padding(end=8.dp),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = Color.White
+                        )
+                    }
+                }
             }
         }
     }
