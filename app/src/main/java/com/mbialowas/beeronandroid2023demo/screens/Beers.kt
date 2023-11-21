@@ -25,6 +25,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.mbialowas.beeronandroid2023demo.R
 import com.mbialowas.beeronandroid2023demo.api.BeersManager
@@ -32,9 +33,9 @@ import com.mbialowas.beeronandroid2023demo.model.BeerItem
 import java.math.BigDecimal
 import java.math.RoundingMode
 
-
+// TODO - is navController required here?
 @Composable
-fun Beers(beersManager: BeersManager) {
+fun Beers(beersManager: BeersManager, navController: NavController) {
     val beers = beersManager.beersResponse.value
     Log.i("DataResponse", "$beers")
 
