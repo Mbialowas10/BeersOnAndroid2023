@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 object Api {
-    private val BASE_URL = "https://api.sampleapis.com/beers/"
+    private val BASE_URL = "https://api.sampleapis.com/"
     //private val BASE_URL = "https://api.sampleapis.com/"
 
     // convert the json into objects that would be understood in project
