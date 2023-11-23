@@ -58,6 +58,8 @@ dependencies {
     implementation("com.squareup.moshi:moshi-kotlin:1.9.3")
     implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
 
+    // coil
+    implementation("io.coil-kt:coil-compose:1.3.2")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
