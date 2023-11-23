@@ -19,6 +19,7 @@ import androidx.navigation.compose.rememberNavController
 import com.mbialowas.beeronandroid2023demo.Navigation.BottomNavBar
 import com.mbialowas.beeronandroid2023demo.Navigation.BottomNavItem
 import com.mbialowas.beeronandroid2023demo.api.BeersManager
+import com.mbialowas.beeronandroid2023demo.screens.About
 import com.mbialowas.beeronandroid2023demo.screens.BeerCard
 import com.mbialowas.beeronandroid2023demo.screens.Beers
 import com.mbialowas.beeronandroid2023demo.ui.theme.BeerOnAndroid2023DemoTheme
@@ -54,6 +55,7 @@ class MainActivity : ComponentActivity() {
                             }
                             composable(BottomNavItem.About.route){
                                 // todo - About(navController)
+                                About(navController)
                             }
 
                         }
