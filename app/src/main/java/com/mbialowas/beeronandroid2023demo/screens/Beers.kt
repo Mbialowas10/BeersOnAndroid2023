@@ -25,6 +25,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.mbialowas.beeronandroid2023demo.R
 import com.mbialowas.beeronandroid2023demo.api.BeersManager
@@ -34,7 +35,7 @@ import java.math.RoundingMode
 
 
 @Composable
-fun Beers(beersManager: BeersManager) {
+fun Beers(beersManager: BeersManager,navController: NavController) {
     //BeerCard()
     val beers = beersManager.beersResponse.value
 
@@ -44,6 +45,7 @@ fun Beers(beersManager: BeersManager) {
         items(beers){beer ->
             BeerCard(beerItem = beer)
         }
+
     }
 }
 
