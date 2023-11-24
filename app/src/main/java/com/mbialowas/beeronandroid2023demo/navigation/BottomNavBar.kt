@@ -1,4 +1,4 @@
-package com.mbialowas.beeronandroid2023demo.Navigation
+package com.mbialowas.beeronandroid2023demo.navigation
 
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material3.Icon
@@ -11,6 +11,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.mbialowas.beeronandroid2023demo.Navigation.BottomNavItem
+
 
 @Composable
 fun BottomNavBar(navController: NavController){

@@ -65,6 +65,9 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.4.0")
     implementation("androidx.compose.material:material-icons-extended-android:1.5.4")
 
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.0")
