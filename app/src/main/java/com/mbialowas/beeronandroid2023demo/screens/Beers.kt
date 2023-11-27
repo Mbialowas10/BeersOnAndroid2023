@@ -141,6 +141,14 @@ fun BeerCard (beerItem: BeerItem){
                                     .addOnFailureListener { e ->
                                         Log.d("Error", "${e.message}")
                                     }
+                            }else{
+                                beerDocRef.delete()
+                                    .addOnSuccessListener {
+                                        Log.d("MJB", "Deleted ${beerItem.name}")
+                                    }
+                                    .addOnFailureListener{ e->
+                                        Log.d("Error", "${e.message}")
+                                    }
                             }
                         }
                         ) {
