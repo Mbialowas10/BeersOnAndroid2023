@@ -10,4 +10,7 @@ data class Rating(
     val average: Double,
     @Json(name = "reviews")
     val reviews: Int
-)
+) {
+    // Empty constructor to initialize the Beer Item data class for firestore
+    constructor() : this(0.00,0)
+}

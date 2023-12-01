@@ -11,6 +11,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.mbialowas.beeronandroid2023demo.api.BeersManager
 import com.mbialowas.beeronandroid2023demo.model.BeerItem
 import com.mbialowas.beeronandroid2023demo.navigation.BottomNavItem
 import com.mbialowas.db.FireStoreInstance
@@ -28,7 +30,7 @@ fun FavoriteScreen(){
     fun fetchBeerItems(){
         fsInstance.collection("favorites")
             .get()
-            .addOnSuccessListener { documents->
+            .addOnSuccessListener { documents ->
                 val items = mutableListOf<BeerItem>()
                 for (document in documents){
                     // convert Firestore docuemnt to BeerItem model
@@ -55,5 +57,4 @@ fun FavoriteScreen(){
             BeerCard(beerItem = beerItems)
         }
     }
-
 }
