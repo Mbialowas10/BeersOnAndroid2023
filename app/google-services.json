@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "141324312285",
+    "project_id": "beeronandroiddemo2",
+    "storage_bucket": "beeronandroiddemo2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141324312285:android:d7fe60f2570b6f28c00534",
+        "android_client_info": {
+          "package_name": "com.mbialowas.beeronandroid2023demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwhtIz6EZY2K7jSgEWD9rKkIFR4WJMyKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
