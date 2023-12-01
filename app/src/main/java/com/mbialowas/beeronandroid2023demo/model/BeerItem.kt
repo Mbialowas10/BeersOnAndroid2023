@@ -17,3 +17,6 @@ data class BeerItem(
     @Json(name = "rating")
     val rating: Rating
 )
+{
+    constructor() : this(0, "", "", "", Rating(0.0,0))
+}

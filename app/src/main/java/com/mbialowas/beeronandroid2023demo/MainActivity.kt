@@ -22,6 +22,7 @@ import com.mbialowas.beeronandroid2023demo.navigation.BottomNavItem
 import com.mbialowas.beeronandroid2023demo.screens.About
 import com.mbialowas.beeronandroid2023demo.screens.BeerCard
 import com.mbialowas.beeronandroid2023demo.screens.Beers
+import com.mbialowas.beeronandroid2023demo.screens.FavoriteScreen
 import com.mbialowas.beeronandroid2023demo.ui.theme.BeerOnAndroid2023DemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -54,7 +55,7 @@ class MainActivity : ComponentActivity() {
                                 Beers(beersManager = beersManager, navController)
                             }
                             composable(BottomNavItem.Favorite.route){
-                                //FavoriteScreen(beersManager = beersManager,navController)
+                                FavoriteScreen(beersManager = beersManager,navController)
                             }
                             composable(BottomNavItem.About.route){
                                 About(navController)

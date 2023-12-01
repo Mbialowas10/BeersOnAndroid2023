@@ -11,12 +11,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.mbialowas.beeronandroid2023demo.api.BeersManager
 import com.mbialowas.beeronandroid2023demo.model.BeerItem
 import com.mbialowas.beeronandroid2023demo.navigation.BottomNavItem
 import com.mbialowas.db.FireStoreInstance
 
 @Composable
-fun FavoriteScreen(){
+fun FavoriteScreen(beersManager: BeersManager, navController: NavController){
 
     // mutable state to hold this list of beer items fetched from Firestore
     val fsInstance = FireStoreInstance.getInstance()
