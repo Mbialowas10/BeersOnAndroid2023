@@ -1,5 +1,6 @@
 package com.mbialowas.beeronandroid2023demo.screens
 
+
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -168,3 +169,7 @@ fun BeerCard ( beerItem: BeerItem){
         }
     }
 }
+
+
+
+
