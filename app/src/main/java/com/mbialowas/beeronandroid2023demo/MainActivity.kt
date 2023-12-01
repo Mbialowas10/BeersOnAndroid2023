@@ -40,6 +40,7 @@ class MainActivity : ComponentActivity() {
                 ) {
 
 
+
                     // fetch our beers from the api
                     val beersManager: BeersManager = BeersManager()
 
@@ -63,6 +64,7 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                     }
+
                 }
             }
         }
