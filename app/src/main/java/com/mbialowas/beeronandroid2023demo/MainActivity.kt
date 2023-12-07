@@ -13,12 +13,14 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.mbialowas.beeronandroid2023demo.Navigation.BottomNavItem
-import com.mbialowas.beeronandroid2023demo.navigation.BottomNavBar
+
 
 import com.mbialowas.beeronandroid2023demo.api.BeersManager
+import com.mbialowas.beeronandroid2023demo.navigation.BottomNavBar
+import com.mbialowas.beeronandroid2023demo.navigation.BottomNavItem
 import com.mbialowas.beeronandroid2023demo.screens.About
 import com.mbialowas.beeronandroid2023demo.screens.Beers
+import com.mbialowas.beeronandroid2023demo.screens.FavoriteScreen
 import com.mbialowas.beeronandroid2023demo.ui.theme.BeerOnAndroid2023DemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -36,7 +38,7 @@ class MainActivity : ComponentActivity() {
                     // fetch api data when class is initialized
                     val beersManager:BeersManager = BeersManager()
 
-                    //Beers(beersManager)
+                    ///Beers(beersManager)
 
                     val navController = rememberNavController()
 
@@ -48,7 +50,8 @@ class MainActivity : ComponentActivity() {
                                 Beers(beersManager= beersManager, navController)
                             }
                             composable(BottomNavItem.Favorite.route){
-                                // todo - FavoriteScreen(beersManager=beersManager, navControler)
+                                // todo - FavoriteScreen(beersManager=beersManager, navController)
+                                FavoriteScreen(beersManager = beersManager, navController =  navController)
                             }
                             composable(BottomNavItem.About.route){
                                 // todo - About(navController)

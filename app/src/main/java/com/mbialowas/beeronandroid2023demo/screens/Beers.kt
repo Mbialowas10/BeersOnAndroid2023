@@ -34,14 +34,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
-import com.mbialowas.beeronandroid2023demo.R
 import com.mbialowas.beeronandroid2023demo.api.BeersManager
 import com.mbialowas.beeronandroid2023demo.model.BeerItem
 import com.mbialowas.db.FireStoreInstance
@@ -59,14 +57,14 @@ fun Beers(beersManager: BeersManager,navController: NavController) {
 
     LazyColumn{
         items(beers){beer ->
-            BeerCard(beerItem = beer)
+            BeerCard(beerItem = beer, navController = navController)
         }
 
     }
 }
 
 @Composable
-fun BeerCard (beerItem: BeerItem){
+fun BeerCard (beerItem: BeerItem, navController: NavController){
     var isIconChanged by remember {mutableStateOf(false)}
     val fsInstance = FireStoreInstance.getInstance()
 

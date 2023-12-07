@@ -1,4 +1,4 @@
-package com.mbialowas.beeronandroid2023demo.Navigation
+package com.mbialowas.beeronandroid2023demo.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
