@@ -10,4 +10,6 @@ data class Rating(
     val average: Double,
     @Json(name = "reviews")
     val reviews: Int
-)
+){
+    constructor() :this(0.0,0)
+}

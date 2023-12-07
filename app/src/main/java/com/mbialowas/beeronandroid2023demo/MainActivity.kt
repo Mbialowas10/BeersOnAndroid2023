@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.google.firebase.auth.FirebaseAuth
 
 
 import com.mbialowas.beeronandroid2023demo.api.BeersManager
@@ -24,6 +25,9 @@ import com.mbialowas.beeronandroid2023demo.screens.FavoriteScreen
 import com.mbialowas.beeronandroid2023demo.ui.theme.BeerOnAndroid2023DemoTheme
 
 class MainActivity : ComponentActivity() {
+
+    private var auth: FirebaseAuth? = null
+
     @OptIn(ExperimentalMaterial3Api::class)
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +45,12 @@ class MainActivity : ComponentActivity() {
                     ///Beers(beersManager)
 
                     val navController = rememberNavController()
+
+                    val user = auth?.currentUser
+
+                    if ( user == null ){
+                        navController.navigate("login")
+                    }
 
                     Scaffold (
                         bottomBar = { BottomNavBar(navController)}
